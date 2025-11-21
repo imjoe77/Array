@@ -1,14 +1,19 @@
-# array_input_5.py
+import sys
 
-array = []
+if len(sys.argv) == 11:
+    script_name = sys.argv[0]
+    array = [None] * 11
+    array[10] = int(sys.argv[1])   
+    print("User input")
+else:
+    array = [1, 2, 3, 9, 7, 10, 5]
+    print("Default Input")
 
-for i in range(5):
-    value = int(input(f"Enter number {i+1}: "))
-    array.append(value)
+sum_of_elements = sum(array)
+print("Sum of array elements:", sum_of_elements)
 
-print("\nYou entered:", array)
+avg_of_elements = sum_of_elements / len(array)
+print("Average of array elements:", avg_of_elements)
 
-print("Sum:", sum(array))
-print("Avg:", sum(array) / len(array))
-print("Max:", max(array))
-print("Min:", min(array))
+print("Max element in array:", max(array))
+print("Min element in array:", min(array))
