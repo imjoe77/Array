@@ -1,11 +1,15 @@
-import sys
+# array_input.py
 
-if len(sys.argv) == 11:
-    print("User provided inputs")
-    array = [int(sys.argv[i]) for i in range(1, 11)]
-else:
-    print("Default input")
-    array = [1, 2, 3, 9, 7, 10, 5]
+# Ask user for number of inputs
+n = int(input("How many numbers do you want to enter? "))
+
+array = []
+
+for i in range(n):
+    value = int(input(f"Enter number {i+1}: "))
+    array.append(value)
+
+print("\nYou entered:", array)
 
 sum_of_elements = sum(array)
 print("Sum:", sum_of_elements)
