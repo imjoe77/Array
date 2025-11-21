@@ -6,7 +6,7 @@ if len(sys.argv) == 12:  # 11 numbers + script name
     print("User input")
 else:
     array = [1, 2, 3, 9, 7, 10, 5]
-    print("Default input")
+    print("User input")
 
 sum_of_elements = sum(array)
 print("Sum of array elements:", sum_of_elements)
