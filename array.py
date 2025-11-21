@@ -1,12 +1,13 @@
 import sys
 
-if len(sys.argv) == 12:  # 11 numbers + script name
+if len(sys.argv) == 11:
     script_name = sys.argv[0]
-    array = [int(x) for x in sys.argv[1:]]  # take all 11 numbers
+    array = [None] * 11
+    array[10] = int(sys.argv[1])   
     print("User input")
 else:
     array = [1, 2, 3, 9, 7, 10, 5]
-    print("User input")
+    print("Default Input")
 
 sum_of_elements = sum(array)
 print("Sum of array elements:", sum_of_elements)
@@ -16,4 +17,3 @@ print("Average of array elements:", avg_of_elements)
 
 print("Max element in array:", max(array))
 print("Min element in array:", min(array))
-print("Program 7")
